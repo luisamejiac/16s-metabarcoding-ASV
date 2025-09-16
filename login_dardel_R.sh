@@ -1,14 +1,8 @@
 #!/bin/bash
-
-# Load modules
-module load PDC/24.11
-
-# Set safe locale to avoid R crashing
-export LANG=C
+almcama@dardel.pdc.kth.se <<'ENDSSH'
+cd scripts/16s-metabarcoding-ASV/output #Go to directory 
+module load PDC/24.11 # Load modules
+export LANG=C # Set safe locale to avoid R crashing
 export LC_ALL=C
-
-
-# Start R interactively
-R
-
+R # Start R interactively
 ENDSSH
